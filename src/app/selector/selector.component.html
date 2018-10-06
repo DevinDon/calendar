@@ -1,0 +1,5 @@
+<img src="../../assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
+<div class="cell" *ngFor="let word of service.year.toString().split(''); let i = index;">
+  {{ word }}
+</div>
+<img src="../../assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
