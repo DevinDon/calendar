@@ -1,0 +1,27 @@
+.select {
+  text-align: center;
+}
+
+.month {
+  display: inline-block;
+  margin: 2rem;
+}
+
+/* .week {
+  margin: 1rem 0;
+} */
+
+.day {
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+}
+
+.day:hover {
+  background-color: lightsteelblue;
+  cursor: pointer;
+}
+
+.none {
+  opacity: 0;
+}
