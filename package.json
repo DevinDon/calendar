@@ -1,6 +1,6 @@
 {
   "name": "calendar",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -48,5 +48,21 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^2.9.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4. Angular CLI 版本：6.2.4",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DevinDon/calendar.git"
+  },
+  "keywords": [
+    "calendar",
+    "angular"
+  ],
+  "author": {
+    "name": "Devin Don",
+    "email": "DevinDon@Foxmail.com",
+    "url": "http://don.red"
+  },
+  "license": "MIT"
 }
