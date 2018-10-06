@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/siimple/dist/siimple.css';
+
+html {
+  font-family: "Montserrat", "微软雅黑 Light", "微软雅黑", sans-serif;
+  transition-duration: 100ms;
+}
