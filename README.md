@@ -1,8 +1,14 @@
 # Calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+Version 0.2.0
 
-Angular CLI 版本：6.2.4
+---
+
+## Demo
+
+Click [here](http://106.14.179.192) to view the online demo.
+
+[点此查看](http://106.14.179.192)在线演示.
 
 ---
 
@@ -16,7 +22,7 @@ Angular CLI 版本：6.2.4
 
 ---
 
-## Installation
+## Install
 
 You must install [NodeJS](http://nodejs.cn/download/) before you do something else.
 
@@ -26,17 +32,17 @@ Run `npm i` to install development enviroment.
 
 在命令行运行 `npm i` 来安装开发及生产环境。
 
----
+Run `npm i -g typescript @angular/cli` to install building tools.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-在命令行运行 `ng serve -o` 来进入开发模式预览。
+在命令行运行 `npm i -g typescript @angular/cli` 来安装构建工具.
 
 ---
 
 ## Build
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+
+Angular CLI 版本：6.2.4
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
@@ -65,3 +71,9 @@ The project has been released on [Github](https://github.com/devindon/calendar).
 Author: Devin Don
 
 作者: 夜寒苏
+
+---
+
+## License
+
+The MIT License ([MIT](https://mit-license.org/))
