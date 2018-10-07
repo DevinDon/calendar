@@ -1,14 +1,9 @@
-"use strict";
-exports.__esModule = true;
-var Express = require("express");
-var app = Express();
+import * as Express from 'express';
+const app = Express();
 app.use(Express.static('./dist/calendar'));
-app.get('/', function (req, res) {
-    res.send('Hello World');
+const server = app.listen(80, function () {
+    console.log(`请在浏览器导航栏中输入 localhost 来访问应用.`);
 });
-var server = app.listen(80, function () {
-    console.log("\u8BF7\u5728\u6D4F\u89C8\u5668\u5BFC\u822A\u680F\u4E2D\u8F93\u5165 localhost \u6765\u8BBF\u95EE\u5E94\u7528.");
-});
-server.on('error', function (error) {
-    console.log("Something wrong: " + error);
+server.on('error', (error) => {
+    console.log(`Something wrong: ${error}`);
 });
