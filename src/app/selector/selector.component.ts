@@ -1,10 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { YearService } from '../year.service';
 
 @Component({
   selector: 'app-selector',
   templateUrl: './selector.component.html',
-  styleUrls: ['./selector.component.css']
+  styleUrls: ['./selector.component.css'],
+  animations: [
+    trigger('year', [
+      state('previous', style({
+        // width: '2rem',
+        fontSize: '1rem',
+        opacity: 0.5
+      })),
+      state('currect', style({
+        // width: '100%',
+        opacity: 1
+      })),
+      state('next', style({
+        // width: '2rem',
+        fontSize: '1rem',
+        opacity: 0.5
+      })),
+      transition('* => *', animate('250ms ease-in'))
+      // transition('')
+    ])
+  ]
 })
 export class SelectorComponent implements OnInit {
 
@@ -13,5 +34,17 @@ export class SelectorComponent implements OnInit {
   ) { }
 
   ngOnInit() { }
+
+  state(i: number): string {
+    if (i === 0) {
+      return 'previous';
+    } else if (i === 1) {
+      return 'currect';
+    } else if (i === 2) {
+      return 'next';
+    } else {
+      return '';
+    }
+  }
 
 }

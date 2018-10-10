@@ -1,12 +1,12 @@
-<div id="header">
+<div id="header" [@default]='"appear"'>
   <div class="siimple-navbar siimple-navbar--primary">
     <div class="siimple-content siimple-content--extra-large">
       <a class="siimple-navbar-title">{{ title }}</a>
       <a class="siimple-navbar-subtitle">{{ service.calcYearName() }}</a>
       <div class="siimple--float-right">
-        <a class="siimple-navbar-item" href="www.github.com">Github</a>
+        <a class="siimple-navbar-item" href="http://www.github.com/DevinDon/Calendar">Github</a>
         <!-- <a class="siimple-navbar-item" href="www.gitee.com">Gitee</a> -->
-        <a class="siimple-navbar-item" href="www.don.red">About</a>
+        <a class="siimple-navbar-item" href="http://www.don.red">About</a>
       </div>
     </div>
   </div>
@@ -19,11 +19,11 @@
   </div> -->
 </div>
 
-<div id="content" class="siimple-content siimple-content--extra-large">
+<div id="content" class="siimple-content siimple-content--extra-large" [@default]='"appear"'>
   <app-calendar></app-calendar>
 </div>
 
-<div id="footer" class="siimple-footer siimple-footer--primary">
+<div id="footer" class="siimple-footer siimple-footer--primary" [@default]='"appear"'>
   <div style="text-align: center;">
     <span>2018 版权所有 夜寒苏</span>
   </div>
