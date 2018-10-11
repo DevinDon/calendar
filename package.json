@@ -1,14 +1,15 @@
 {
   "name": "calendar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
+    "init": "echo init",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "watch": "ng serve -o",
+    "build": "ng build --prod && tsc server/*.ts --outDir dist/server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "node ./server/server.js"
+    "deploy": "node dist/server/server.js"
   },
   "private": true,
   "dependencies": {
@@ -49,7 +50,7 @@
     "tslint": "~5.11.0",
     "typescript": "^2.9.2"
   },
-  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4. Angular CLI 版本：6.2.4",
+  "description": "Calendar generate with Angular.",
   "main": "index.js",
   "repository": {
     "type": "git",
