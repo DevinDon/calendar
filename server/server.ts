@@ -21,7 +21,7 @@ const port: number = 10000;
  * @param server Server amount.
  */
 function init(server: number): void {
-  while (server > 0) {
+  while (server-- > 0) {
     const p = port + server;
     servers.push({
       port: p,
