@@ -2,6 +2,8 @@ import * as Express from 'express';
 
 const app: Express.Application = Express();
 
+app.use('/', Express.static('dist/calendar/'));
+
 app.get('/api', (req, res) => {
   res.end('API get');
 });
