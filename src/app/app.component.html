@@ -1,4 +1,4 @@
-<div id="header" [@default]='"appear"'>
+<div id="header" [@page]="'header'">
   <div class="siimple-navbar siimple-navbar--primary">
     <div class="siimple-content siimple-content--extra-large">
       <a class="siimple-navbar-title">{{ title }}</a>
@@ -19,11 +19,11 @@
   </div> -->
 </div>
 
-<div id="content" class="siimple-content siimple-content--extra-large" [@default]='"appear"'>
+<div id="content" class="siimple-content siimple-content--extra-large" [@page]="'content'">
   <app-calendar></app-calendar>
 </div>
 
-<div id="footer" class="siimple-footer siimple-footer--primary" [@default]='"appear"'>
+<div id="footer" class="siimple-footer siimple-footer--primary" [@page]="'footer'">
   <div style="text-align: center;">
     <span>2018 版权所有 夜寒苏</span>
   </div>

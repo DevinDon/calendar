@@ -7,13 +7,21 @@ import { YearService } from './year.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-    trigger('default', [
-      state('appear', style({
-        backgroundColor: '#eee',
-        transform: 'scale(1)'
-      })),
-      transition(':enter, :leave', [
-        animate('200ms ease-in')
+    trigger('page', [
+      state('header', style({ opacity: 1 })),
+      state('content', style({ opacity: 1 })),
+      state('footer', style({ opacity: 1 })),
+      transition('void => header', [
+        style({ opacity: 0, transform: 'translateY(-50px)' }),
+        animate(500, style({ transform: 'translateY(0)' }))
+      ]),
+      transition('void => content', [
+        style({ opacity: 0, transform: 'translateY(-25%)' }),
+        animate('500ms 100ms ease-in', style({ transform: 'translateY(0)' }))
+      ]),
+      transition('void => footer', [
+        style({ opacity: 0, transform: 'translateY(50px)' }),
+        animate(500, style({ transform: 'translateY(0)' }))
       ])
     ])
   ]

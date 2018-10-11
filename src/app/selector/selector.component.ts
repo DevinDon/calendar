@@ -10,22 +10,29 @@ import { YearService } from '../year.service';
     trigger('year', [
       state('previous', style({
         opacity: 0.5,
-        transform: 'scale(0.25)'
+        transform: 'scale(0.5)'
       })),
       state('currect', style({
         opacity: 1
       })),
       state('next', style({
         opacity: 0.5,
-        transform: 'scale(0.25)'
+        transform: 'scale(0.5)'
       })),
-      transition('void <=> previous, void <=> next', [
-        animate('2500ms ease-in')
+      transition('void => *', [
+        style({ transform: 'scale(0)', width: 0, opacity: 0 }),
+        animate(250, style({ width: '*', transform: 'scale(0.5)', opacity: 0.5 }))
       ]),
-      transition('previous <=> currect, currect <=> next', [
-        animate('3000ms ease-in')
+      transition('* => void', [
+        style({ width: '*' }),
+        animate(250, style({ transform: 'scale(0)', width: 0, opacity: 0 }))
+      ]),
+      transition('currect => next, currect => previous', [
+        animate(250)
+      ]),
+      transition('next => currect, previous => currect', [
+        animate(250)
       ])
-      // transition('')
     ])
   ]
 })
@@ -45,7 +52,7 @@ export class SelectorComponent implements OnInit {
     } else if (i === 2) {
       return 'next';
     } else {
-      return 'next';
+      return 'none';
     }
   }
 
