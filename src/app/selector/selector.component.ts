@@ -19,7 +19,12 @@ import { YearService } from '../year.service';
         opacity: 0.5,
         transform: 'scale(0.25)'
       })),
-      transition('* => *, void <=> *', animate('2500ms ease-in'))
+      transition('void <=> previous, void <=> next', [
+        animate('2500ms ease-in')
+      ]),
+      transition('previous <=> currect, currect <=> next', [
+        animate('3000ms ease-in')
+      ])
       // transition('')
     ])
   ]
@@ -40,7 +45,7 @@ export class SelectorComponent implements OnInit {
     } else if (i === 2) {
       return 'next';
     } else {
-      return '';
+      return 'next';
     }
   }
 
