@@ -1,8 +1,8 @@
 {
   "name": "calendar",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "scripts": {
-    "init": "echo init",
+    "init": "npm i -g typescript @angular/cli && npm i",
     "ng": "ng",
     "watch": "ng serve -o",
     "build": "npm run build-app && npm run build-server",

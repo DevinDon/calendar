@@ -1,14 +1,16 @@
 # Calendar
 
-Version 0.2.0
+Last Update: 2018.10.11
+
+Version 0.3.0
 
 ---
 
 ## Demo
 
-Click [here](http://106.14.179.192) to view the online demo.
+Click [here](http://demo.don.red/calendar) to view the online demo.
 
-[点此查看](http://106.14.179.192)在线演示.
+[点此查看](http://demo.don.red/calendar)在线演示.
 
 ---
 
@@ -24,17 +26,13 @@ Click [here](http://106.14.179.192) to view the online demo.
 
 ## Install
 
-You must install [NodeJS](http://nodejs.cn/download/) before you do something else.
+You must install [NodeJS(ORG)](http://nodejs.org/download/) before you do something else.
 
-你需要安装 [NodeJS](http://nodejs.cn/download/) 才可以进行后续操作。
+你需要安装 [NodeJS(CN)](http://nodejs.cn/download/) 才可以进行后续操作。
 
-Run `npm i` to install development enviroment.
+Run `npm run init` to install building tools and initialize project envoriment.
 
-在命令行运行 `npm i` 来安装开发及生产环境。
-
-Run `npm i -g typescript @angular/cli` to install building tools.
-
-在命令行运行 `npm i -g typescript @angular/cli` 来安装构建工具.
+在命令行运行 `npm run init` 来安装构建工具.
 
 ---
 
@@ -44,17 +42,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Angular CLI 版本：6.2.4
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist` directory.
 
-在命令行运行 `ng build --prod` 来在 `dist/` 目录下生成部署文件。
+在命令行运行 `npm run build` 来在 `dist` 目录下生成部署文件。
 
 ---
 
 ## Deploy
 
-Run `npm run deploy` and then navigate to `http://localhost`. You will see the web application.
+Run `npm run deploy` and then navigate to `http://localhost:10000`. You will see the web application.
 
-在命令行运行 `npm run deploy`，并在浏览器导航栏中输入 `localhost` 即可访问应用。
+在命令行运行 `npm run deploy`，并在浏览器导航栏中输入 `localhost:10000` 即可访问应用。
 
 ---
 
@@ -76,4 +74,4 @@ Author: Devin Don
 
 ## License
 
-The MIT License ([MIT](https://mit-license.org/))
+The [MIT](https://mit-license.org/) License.
