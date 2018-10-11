@@ -19,7 +19,7 @@ import { YearService } from '../year.service';
         opacity: 0.5,
         transform: 'scale(0.25)'
       })),
-      transition('* => *', animate('2500ms ease-in'))
+      transition('* => *, void <=> *', animate('2500ms ease-in'))
       // transition('')
     ])
   ]
