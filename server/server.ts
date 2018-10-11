@@ -3,11 +3,11 @@ import * as Express from 'express';
 const app: Express.Application = Express();
 
 app.get('/api', (req, res) => {
-  res.write('API get');
+  res.end('API get');
 });
 
 app.get('/api/test', (req, res) => {
-  res.write('API test');
+  res.end('API test');
 });
 
 /** API Servers. */
@@ -24,11 +24,11 @@ function init(server: number): void {
     servers.push({
       port: p,
       server: app
-        .listen(port + server, () => {
-          console.log(`Server start on port: ${port + server}.`);
+        .listen(p, () => {
+          console.log(`Server start on port: ${p}.`);
         })
         .on('error', (error) => {
-          console.warn(`Server on port: ${port + server} errors: ${error}.`);
+          console.warn(`Server on port: ${p} errors: ${error}.`);
         })
     });
   }
