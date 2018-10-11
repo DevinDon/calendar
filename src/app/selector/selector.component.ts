@@ -9,20 +9,17 @@ import { YearService } from '../year.service';
   animations: [
     trigger('year', [
       state('previous', style({
-        // width: '2rem',
-        fontSize: '1rem',
-        opacity: 0.5
+        opacity: 0.5,
+        transform: 'scale(0.25)'
       })),
       state('currect', style({
-        // width: '100%',
         opacity: 1
       })),
       state('next', style({
-        // width: '2rem',
-        fontSize: '1rem',
-        opacity: 0.5
+        opacity: 0.5,
+        transform: 'scale(0.25)'
       })),
-      transition('* => *', animate('250ms ease-in'))
+      transition('* => *', animate('2500ms ease-in'))
       // transition('')
     ])
   ]

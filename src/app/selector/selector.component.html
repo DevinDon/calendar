@@ -1,5 +1,5 @@
-<img src="../../assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
+<img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
 <div class="cell" *ngFor="let year of [service.year - 1, service.year, service.year + 1]; let i = index;" [@year]='state(i)'>
   {{ year }}
 </div>
-<img src="../../assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
+<img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
