@@ -4,10 +4,24 @@ const app: Express.Application = Express();
 
 app.use(Express.static('./dist/calendar'));
 
-const server = app.listen(80, function () {
-  console.log(`请在浏览器导航栏中输入 localhost 来访问应用.`);
-});
+/** API Servers. */
+const servers = [];
+const port: number = 10000;
 
-server.on('error', (error) => {
-  console.log(`Something wrong: ${error}`);
-});
+/**
+ * Init servers.
+ * @param server Server amount.
+ */
+function init(server: number): void {
+  while (server > 0) {
+    servers.push(
+      app.listen(port + server, () => {
+        console.log(`Server start on port: ${port + server}.`);
+      }).on('error', (error) => {
+        console.warn(`Server on port: ${port + server} errors: ${error}.`);
+      })
+    );
+  }
+}
+
+init(2);
