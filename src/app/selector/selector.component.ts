@@ -8,30 +8,26 @@ import { YearService } from '../year.service';
   styleUrls: ['./selector.component.css'],
   animations: [
     trigger('year', [
-      state('previous', style({
-        opacity: 0.5,
-        transform: 'scale(0.5)'
-      })),
       state('currect', style({
-        opacity: 1
+        opacity: 1,
+        transform: 'scale(1)',
+        width: '*'
       })),
-      state('next', style({
+      state('other', style({
         opacity: 0.5,
-        transform: 'scale(0.5)'
+        transform: 'scale(0.5)',
+        width: '*'
       })),
-      transition('void => *', [
-        style({ transform: 'scale(0)', width: 0, opacity: 0 }),
-        animate(250, style({ width: '*', transform: 'scale(0.5)', opacity: 0.5 }))
+      state('void', style({
+        opacity: 0,
+        transform: 'scale(0)',
+        width: 0
+      })),
+      transition('void <=> other', [
+        animate(500)
       ]),
-      transition('* => void', [
-        style({ width: '*' }),
-        animate(250, style({ transform: 'scale(0)', width: 0, opacity: 0 }))
-      ]),
-      transition('currect => next, currect => previous', [
-        animate(250)
-      ]),
-      transition('next => currect, previous => currect', [
-        animate(250)
+      transition('currect <=> other', [
+        animate(500)
       ])
     ])
   ]
@@ -45,15 +41,7 @@ export class SelectorComponent implements OnInit {
   ngOnInit() { }
 
   state(i: number): string {
-    if (i === 0) {
-      return 'previous';
-    } else if (i === 1) {
-      return 'currect';
-    } else if (i === 2) {
-      return 'next';
-    } else {
-      return 'none';
-    }
+    return i === 1 ? 'currect' : 'other';
   }
 
 }
