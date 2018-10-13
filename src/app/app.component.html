@@ -2,7 +2,7 @@
   <div class="siimple-navbar siimple-navbar--primary">
     <div class="siimple-content siimple-content--extra-large">
       <a class="siimple-navbar-title">{{ title }}</a>
-      <a class="siimple-navbar-subtitle">{{ service.calcYearName() }}</a>
+      <a class="siimple-navbar-subtitle">{{ service.getYearName() }}</a>
       <div class="siimple--float-right">
         <a class="siimple-navbar-item" href="http://www.github.com/DevinDon/Calendar">Github</a>
         <!-- <a class="siimple-navbar-item" href="www.gitee.com">Gitee</a> -->
@@ -19,7 +19,7 @@
   </div> -->
 </div>
 
-<div id="content" class="siimple-content siimple-content--extra-large" [@page]="'content'">
+<div *ngIf="true" id="content" class="siimple-content siimple-content--extra-large" [@page]="'content'">
   <app-calendar></app-calendar>
 </div>
 

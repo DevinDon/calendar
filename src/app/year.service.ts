@@ -18,6 +18,8 @@ export class YearService {
 
   /** 年份. */
   year: number;
+  /** 月份. */
+  month: number;
   /** 干支纪年法. */
   yearNames: YearNmaes;
   /** 天干. */
@@ -29,6 +31,7 @@ export class YearService {
     this.results = {};
     this.yearNames = {};
     this.year = new Date().getFullYear();
+    this.month = new Date().getMonth() + 1;
     this.heaven = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
     this.earth = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
   }
@@ -37,7 +40,7 @@ export class YearService {
    * 生成指定年份的日期信息.
    * @returns 年份信息, 以月和周为分隔的三维数组.
    */
-  calc() {
+  getYear() {
     if (this.results[`Y${this.year}`]) {
       return this.results[`Y${this.year}`];
     }
@@ -69,12 +72,16 @@ export class YearService {
     return result;
   }
 
-  calcYearName() {
+  getYearName() {
     if (this.results[`N${this.year}`]) {
       return this.results[`N${this.year}`];
     }
 
     return this.results[`N${this.year}`] = `${this.heaven[(this.year - 4) % 10]}${this.earth[(this.year - 4) % 12]}`;
+  }
+
+  getMonth() {
+    return this.results[`Y${this.year}`][this.month - 1];
   }
 
 }

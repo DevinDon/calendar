@@ -7,7 +7,7 @@ import { YearService } from '../year.service';
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.css'],
   animations: [
-    trigger('year', [
+    trigger('change', [
       state('currect', style({
         opacity: 1,
         transform: 'scale(1)',
@@ -16,7 +16,8 @@ import { YearService } from '../year.service';
       state('other', style({
         opacity: 0.5,
         transform: 'scale(0.5)',
-        width: '*'
+        width: '*',
+        margin: '0 -1rem'
       })),
       state('void', style({
         opacity: 0,
@@ -39,6 +40,10 @@ export class SelectorComponent implements OnInit {
   ) { }
 
   ngOnInit() { }
+
+  months(month: number) {
+    return [month - 1 > 0 ? month - 1 : 12, month, month + 1 < 13 ? month + 1 : 1];
+  }
 
   state(i: number): string {
     return i === 1 ? 'currect' : 'other';

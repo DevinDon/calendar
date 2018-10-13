@@ -3,6 +3,11 @@
   padding-bottom: 0;
 }
 
+/* #content {
+  display: block;
+  height: 100px;
+} */
+
 #footer {
   height: 2rem;
   margin: 0;

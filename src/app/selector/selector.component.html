@@ -1,5 +1,15 @@
-<img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
-<div class="cell" *ngFor="let year of [service.year - 1, service.year, service.year + 1]; let i = index;" [@year]='state(i)'>
-  {{ year }}
+<div class="year">
+  <img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
+  <div class="cell" *ngFor="let year of [service.year - 1, service.year, service.year + 1]; let i = index;" [@change]='state(i)'>
+    {{ year }}
+  </div>
+  <img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
 </div>
-<img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
+
+<!-- <div class="month">
+  <img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.month = service.month - 1 > 0 ? service.month - 1 : 12">
+  <div class="cell" *ngFor="let month of months(service.month); let i = index;" [@change]='state(i)'>
+    {{ month }}
+  </div>
+  <img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.month = service.month + 1 < 13 ? service.month + 1 : 1">
+</div> -->

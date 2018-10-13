@@ -8,20 +8,20 @@ import { YearService } from './year.service';
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('page', [
-      state('header', style({ opacity: 1 })),
-      state('content', style({ opacity: 1 })),
-      state('footer', style({ opacity: 1 })),
+      state('header', style({ transform: 'translateY(0)' })),
+      state('content', style({ transform: 'translateX(0)' })),
+      state('footer', style({ transform: 'translateY(0)' })),
       transition('void => header', [
-        style({ opacity: 0, transform: 'translateY(-50px)' }),
-        animate(500, style({ transform: 'translateY(0)' }))
+        style({ transform: 'translateY(-100%)' }),
+        animate('1s ease-in-out')
       ]),
       transition('void => content', [
-        style({ opacity: 0, transform: 'translateY(-25%)' }),
-        animate('500ms 100ms ease-in', style({ transform: 'translateY(0)' }))
+        style({ transform: 'translateX(-100%)' }),
+        animate('1s ease-in-out')
       ]),
       transition('void => footer', [
-        style({ opacity: 0, transform: 'translateY(50px)' }),
-        animate(500, style({ transform: 'translateY(0)' }))
+        style({ transform: 'translateY(100%)' }),
+        animate('1s ease-in-out')
       ])
     ])
   ]

@@ -10,7 +10,7 @@
 </div>
 
 <div class="year">
-  <div class="month" *ngFor="let month of service.calc(); let m = index;">
+  <div class="month" *ngFor="let month of service.getYear(); let m = index;">
     <h2>{{ service.year }} 年 {{ m + 1 }} 月</h2>
 
     <div class="siimple-table">
