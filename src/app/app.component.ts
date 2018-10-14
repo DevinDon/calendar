@@ -16,11 +16,13 @@ import { AnimationConfig } from './config/animation.config';
       state('void', style({ opacity: 0 })),
       transition('void => header', [
         style({ transform: 'translateY(-50%)' }),
-        animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
+        // animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
+        animate('0.75s 0.75s ease-out')
       ]),
       transition('void => footer', [
         style({ transform: 'translateY(50%)' }),
-        animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
+        // animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
+        animate('0.75s 0.75s ease-out')
       ])
     ])
   ]

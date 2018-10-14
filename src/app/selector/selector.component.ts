@@ -32,10 +32,12 @@ import { AnimationService } from '../service/animation.service';
         width: 0
       })),
       transition('void <=> *', [
-        animate(`${AnimationConfig.normal} ease-out`)
+        // animate(`${AnimationConfig.normal} ease-out`)
+        animate('0.75s ease-out')
       ]),
       transition('currect <=> other, currect <=> otherMonth', [
-        animate(`${AnimationConfig.normal} ease-out`)
+        // animate(`${AnimationConfig.normal} ease-out`)
+        animate('0.75s ease-out')
       ])
     ])
   ]

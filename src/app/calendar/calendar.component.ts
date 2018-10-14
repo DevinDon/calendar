@@ -13,10 +13,12 @@ import { AnimationConfig } from '../config/animation.config';
       state('month', style({ transform: 'translateX(0)', opacity: 1 })),
       state('void', style({ transform: 'translateX(-50%)', opacity: 0 })),
       transition('void => month', [
-        animate(`${AnimationConfig.normal} ease-out`)
+        // animate(AnimationConfig.normal + ' ease-out')
+        animate('0.5s ease-out')
       ]),
       transition('month => void', [
-        animate(`${AnimationConfig.normal} ease-out`, style({ transform: 'translateX(50%)', opacity: 0 }))
+        // animate(`${AnimationConfig.normal} ease-out`, style({ transform: 'translateX(50%)', opacity: 0 }))
+        animate('0.5s ease-in', style({ transform: 'translateX(50%)', opacity: 0 }))
       ]),
     ])
   ]
