@@ -2,28 +2,29 @@
   <app-selector></app-selector>
 </div>
 
-<div class="year">
-  <div class="month" *ngFor="let month of service.getYear(); let m = index;">
-    <div *ngIf="animations[m]" [@month]="m === 0 ? 'first' : 'month'" (@month.done)="animations[m + 1] = true">
-      <h2>{{ service.year }} 年 {{ m + 1 }} 月</h2>
+<div class="year" style="display: flex; flex-direction: row; justify-content: center;">
+  <!-- <div class="month" *ngFor="let month of year.getYear()[year.month]"> -->
+  <div class="month" [@month]="animation.state.month" (@month.done)="animation.state.month = 'month'">
+    <!-- <div *ngIf="year.month === m + 1" [@month]=""> -->
+    <h2>{{ year.year }} 年 {{ year.month }} 月</h2>
 
-      <div class="siimple-table">
-        <div class="siimple-table-header">
-          <div class="siimple-table-row">
-            <div class="day siimple-table-cell" *ngFor="let head of heads">
-              {{ head }}
-            </div>
+    <div class="siimple-table">
+      <div class="siimple-table-header">
+        <div class="siimple-table-row">
+          <div class="day siimple-table-cell" *ngFor="let head of heads">
+            {{ head }}
           </div>
         </div>
+      </div>
 
-        <div class="siimple-table-body">
-          <div class="week siimple-table-row" *ngFor="let week of month">
-            <div class="day siimple-table-cell" [ngClass]="{'none': day === 0}" *ngFor="let day of week">
-              {{ day }}
-            </div>
+      <div class="siimple-table-body">
+        <div class="week siimple-table-row" *ngFor="let week of year.getMonth()">
+          <div class="day siimple-table-cell" [ngClass]="{'none': day === 0}" *ngFor="let day of week">
+            {{ day }}
           </div>
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </div>
 </div>

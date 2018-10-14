@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { YearService } from './year.service';
+import { YearService } from './service/year.service';
+import { AnimationService } from './service/animation.service';
+import { AnimationConfig } from './config/animation.config';
 
 @Component({
   selector: 'app-root',
@@ -14,15 +16,11 @@ import { YearService } from './year.service';
       state('void', style({ opacity: 0 })),
       transition('void => header', [
         style({ transform: 'translateY(-50%)' }),
-        animate('1s 1s ease-out')
+        animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
       ]),
-      // transition('void => content', [
-      //   style({ transform: 'translateY(-50%)' }),
-      //   animate('1s 2s ease-in-out')
-      // ]),
       transition('void => footer', [
         style({ transform: 'translateY(50%)' }),
-        animate('1s 1s ease-out')
+        animate(`${AnimationConfig.normal} ${AnimationConfig.normal} ease-out`)
       ])
     ])
   ]
@@ -34,7 +32,8 @@ export class AppComponent {
   detail = '内容';
 
   constructor(
-    public service: YearService
+    public service: YearService,
+    public animation: AnimationService
   ) { }
 
 }

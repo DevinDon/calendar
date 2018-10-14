@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.year {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .month {
   display: inline-block;
   margin: 2rem;

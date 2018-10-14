@@ -1,4 +1,4 @@
-<div id="header" [@page]="'header'">
+<div id="header" [@page]="'header'" (@page.done)="animation.contentShouldIn = true">
   <div class="siimple-navbar siimple-navbar--primary">
     <div class="siimple-content siimple-content--extra-large">
       <a class="siimple-navbar-title">{{ title }}</a>
@@ -19,7 +19,7 @@
   </div> -->
 </div>
 
-<div *ngIf="true" id="content" class="siimple-content siimple-content--extra-large" [@page]="'content'">
+<div id="content" class="siimple-content siimple-content--extra-large" *ngIf="animation.contentShouldIn">
   <app-calendar></app-calendar>
 </div>
 

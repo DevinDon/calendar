@@ -1,15 +1,15 @@
 <div class="year">
-  <img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.year = service.year - 1">
-  <div class="cell" *ngFor="let year of [service.year - 1, service.year, service.year + 1]; let i = index;" [@change]='state(i)'>
+  <img src="assets/backward.png" alt="backward" width="32" height="32" (click)="previousYear()">
+  <div class="cell" *ngFor="let year of [year.year - 1, year.year, year.year + 1]; let i = index;" [@change]='state(i)'>
     {{ year }}
   </div>
-  <img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.year = service.year + 1">
+  <img src="assets/forward.png" alt="forward" width="32" height="32" (click)="nextYear()">
 </div>
 
-<!-- <div class="month">
-  <img src="assets/backward.png" alt="backward" width="32" height="32" (click)="service.month = service.month - 1 > 0 ? service.month - 1 : 12">
-  <div class="cell" *ngFor="let month of months(service.month); let i = index;" [@change]='state(i)'>
+<div class="month">
+  <img src="assets/backward.png" alt="backward" width="24" height="24" (click)="previousMonth()">
+  <div class="cell" *ngFor="let month of months(year.month); let i = index;" [@change]='stateMonth(i)'>
     {{ month }}
   </div>
-  <img src="assets/forward.png" alt="forward" width="32" height="32" (click)="service.month = service.month + 1 < 13 ? service.month + 1 : 1">
-</div> -->
+  <img src="assets/forward.png" alt="forward" width="24" height="24" (click)="nextMonth()">
+</div>
