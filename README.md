@@ -1,16 +1,16 @@
 # Calendar
 
-Last Update: 2018.10.11
+Last Update: 2018.10.14
 
-Version 0.3.0
+Version 0.3.1
 
 ---
 
 ## Demo
 
-Click [here](http://demo.don.red/calendar) to view the online demo.
+Click [here](https://demo.don.red/calendar) to view the online demo.
 
-[点此查看](http://demo.don.red/calendar)在线演示.
+[点此查看](https://demo.don.red/calendar)在线演示.
 
 ---
 
@@ -21,6 +21,8 @@ Click [here](http://demo.don.red/calendar) to view the online demo.
 - 天气回顾及预报
 - 星座运势
 - 年份运势
+- 使用 Electron 来构建桌面版本
+- 使用 NativeScript 来构建移动端版本
 
 ---
 
@@ -52,7 +54,7 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 Run `npm run deploy` and then navigate to `http://localhost:10000`. You will see the web application.
 
-在命令行运行 `npm run deploy`，并在浏览器导航栏中输入 `localhost:10000` 即可访问应用。
+在命令行运行 `npm run deploy` 将会在 10000 和 10001 端口部署静态服务器，随后在浏览器导航栏中输入 `localhost:10000` 即可访问应用。
 
 ---
 
