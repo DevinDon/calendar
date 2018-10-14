@@ -34,6 +34,7 @@ export class YearService {
     this.month = new Date().getMonth() + 1;
     this.heaven = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
     this.earth = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+    this.getYear();
   }
 
   /**
@@ -81,7 +82,7 @@ export class YearService {
   }
 
   getMonth() {
-    return this.results[`Y${this.year}`][this.month - 1];
+    return (this.results[`Y${this.year}`] ? this.results[`Y${this.year}`] : this.getYear())[this.month - 1];
   }
 
 }
