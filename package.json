@@ -2,7 +2,7 @@
   "name": "calendar",
   "version": "0.3.2",
   "scripts": {
-    "build": "npm run build-app && npm run build-server",
+    "build": "npm run build:app && npm run build:server",
     "build:app": "ng build --prod",
     "build:server": "tsc server/*.ts --outDir dist/server --target es6 --module commonjs",
     "deploy": "node dist/server/server.js",
