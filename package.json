@@ -1,17 +1,17 @@
 {
   "name": "calendar",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "scripts": {
-    "init": "npm i -g typescript @angular/cli && npm i",
-    "ng": "ng",
-    "watch": "ng serve -o",
     "build": "npm run build-app && npm run build-server",
-    "build-server": "tsc server/*.ts --outDir dist/server --target es6 --module commonjs",
-    "build-app": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
+    "build:app": "ng build --prod",
+    "build:server": "tsc server/*.ts --outDir dist/server --target es6 --module commonjs",
+    "deploy": "node dist/server/server.js",
     "e2e": "ng e2e",
-    "deploy": "node dist/server/server.js"
+    "init": "npm i -g typescript@2.9.2 @angular/cli@6.2.4 && npm i",
+    "lint": "ng lint",
+    "ng": "ng",
+    "test": "ng test",
+    "watch": "ng serve -o"
   },
   "private": true,
   "dependencies": {
